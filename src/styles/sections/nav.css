@@ -27,6 +27,8 @@
 }
 
 .brand {
+  position: relative;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
@@ -129,6 +131,8 @@
 }
 
 .nav__toggle {
+  position: relative;
+  z-index: 3;
   display: none;
   width: 46px;
   height: 46px;
@@ -181,6 +185,7 @@
     justify-content: center;
     gap: 2.25rem;
     padding: 6.5rem var(--gutter) 3rem;
+    overflow-y: auto;
     background:
       radial-gradient(80% 60% at 100% 0%, rgb(255 45 120 / 10%), transparent 65%),
       rgb(5 6 10 / 97%);

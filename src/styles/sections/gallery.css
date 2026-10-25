@@ -97,6 +97,45 @@
   background-size: 48px 48px;
 }
 
+.gallery__glyph {
+  position: absolute;
+  top: 12%;
+  right: 0.9rem;
+  z-index: -1;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.5vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  -webkit-text-stroke: 1px hsl(var(--h) 85% 66% / 38%);
+  pointer-events: none;
+  transition:
+    transform 900ms var(--ease),
+    opacity 900ms var(--ease);
+}
+
+.gallery__item:hover .gallery__glyph {
+  transform: translateY(-6px);
+  opacity: 0.95;
+}
+
+.gallery__item--a .gallery__glyph {
+  top: 16%;
+  right: 1.4rem;
+  font-size: clamp(4.5rem, 12vw, 11rem);
+}
+
+.gallery__item--b .gallery__glyph {
+  top: 10%;
+  right: 1rem;
+}
+
+.gallery__item--d .gallery__glyph,
+.gallery__item--c .gallery__glyph {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
 .gallery__cap {
   position: absolute;
   inset: auto 0 0;

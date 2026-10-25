@@ -18,6 +18,7 @@
 }
 
 .rate-toggle__btn {
+  min-height: 42px;
   padding: 0.55rem 1.15rem;
   color: var(--muted);
   font-family: var(--font-mono);
@@ -194,5 +195,14 @@
 
   .pass__price > span:nth-child(2) {
     font-size: 2.6rem;
+  }
+
+  .rate-toggle {
+    width: 100%;
+  }
+
+  .rate-toggle__btn {
+    flex: 1;
+    min-height: 46px;
   }
 }
