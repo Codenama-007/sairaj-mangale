@@ -113,8 +113,9 @@ function renderGallery() {
   grid.innerHTML = site.gallery
     .map(
       (item, index) => `
-      <figure class="gallery__item gallery__item--${item.area}" data-reveal="scale" style="--reveal-delay: ${index * 60}ms">
-        <div class="gallery__art" style="--h: ${item.hue}" aria-hidden="true"></div>
+      <figure class="gallery__item gallery__item--${item.area}" data-reveal="scale" style="--h: ${item.hue}; --reveal-delay: ${index * 60}ms">
+        <div class="gallery__art" aria-hidden="true"></div>
+        <span class="gallery__glyph" aria-hidden="true">${escapeHtml(item.glyph)}</span>
         <figcaption class="gallery__cap">
           <span class="gallery__num">${pad(index + 1)}</span>
           <span class="gallery__title">${escapeHtml(item.title)}</span>
@@ -265,28 +266,31 @@ function initNav() {
   onScroll();
 
   const links = $$("[data-nav-link]");
-  const sections = links
-    .map((link) => document.querySelector(link.getAttribute("href")))
+  // Every section that should update the nav — the last two have no nav link,
+  // so they clear the active state instead of leaving "Floor" stuck on.
+  const tracked = ["#arena", "#stations", "#games", "#pricing", "#floor", "#reviews", "#booking"]
+    .map((selector) => document.querySelector(selector))
     .filter(Boolean);
 
   links.forEach((link) => link.setAttribute("aria-current", "false"));
 
-  if (!("IntersectionObserver" in window) || !sections.length) return;
+  if (!("IntersectionObserver" in window) || !tracked.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const id = `#${entry.target.id}`;
+        const active = links.find((link) => link.getAttribute("href") === id);
         links.forEach((link) => {
-          link.setAttribute("aria-current", String(link.getAttribute("href") === id));
+          link.setAttribute("aria-current", String(link === active));
         });
       });
     },
     { rootMargin: "-45% 0px -50% 0px" },
   );
 
-  sections.forEach((section) => observer.observe(section));
+  tracked.forEach((section) => observer.observe(section));
 }
 
 function initReveal() {
@@ -370,8 +374,8 @@ function initGames() {
 
   const updateCount = (shown, label) => {
     if (!count) return;
-    const suffix = label === "All" ? "" : ` · ${label}`;
-    count.textContent = `${shown} of ${cards.length} titles${suffix}`;
+    count.textContent =
+      label === "All" ? `${shown} titles` : `${shown} of ${cards.length} titles · ${label}`;
   };
 
   buttons.forEach((button) => {

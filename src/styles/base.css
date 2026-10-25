@@ -121,6 +121,9 @@ p {
 .section {
   position: relative;
   padding-block: var(--section-y);
+  /* Decorative glows bleed past the edge; clip them so mobile browsers
+     don't widen the layout viewport and zoom the whole page out. */
+  overflow-x: clip;
   scroll-margin-top: 92px;
 }
 
@@ -140,7 +143,7 @@ p {
   max-width: none;
 }
 
-.section-head--split > div {
+.section-head__text {
   display: grid;
   gap: 1.1rem;
 }

@@ -136,11 +136,11 @@ export const site = {
   ],
 
   gallery: [
-    { area: "a", title: "The floor", meta: "24 stations, zero daylight", hue: 188 },
-    { area: "b", title: "Squad pods", meta: "Closed-door rooms, 4 — 6 seats", hue: 280 },
-    { area: "c", title: "The stage", meta: "Friday night brackets", hue: 322 },
-    { area: "d", title: "The bar", meta: "Coffee at 2AM", hue: 158 },
-    { area: "e", title: "After hours", meta: "Open till 4 on weekends", hue: 214 },
+    { area: "a", title: "The floor", meta: "24 stations, zero daylight", hue: 188, glyph: "24" },
+    { area: "b", title: "Squad pods", meta: "Closed-door rooms, 4 — 6 seats", hue: 280, glyph: "POD" },
+    { area: "c", title: "The stage", meta: "Friday night brackets", hue: 322, glyph: "LIVE" },
+    { area: "d", title: "The bar", meta: "Coffee at 2AM", hue: 158, glyph: "02:00" },
+    { area: "e", title: "After hours", meta: "Open till 4 on weekends", hue: 214, glyph: "04AM" },
   ],
 
   // Invented quotes — swap in real, permissioned reviews before launch.
