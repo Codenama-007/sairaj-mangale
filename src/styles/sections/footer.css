@@ -1,0 +1,127 @@
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 6vw, 5rem) 1.75rem;
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(70% 90% at 50% 0%, rgb(0 229 255 / 5%), transparent 70%),
+    var(--bg-raised);
+}
+
+.footer__brand {
+  display: block;
+  color: #0b0f17;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 17vw, 12rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--line-strong);
+  transition:
+    -webkit-text-stroke-color var(--med) ease,
+    color var(--med) ease;
+}
+
+.footer__brand:hover {
+  color: rgb(0 229 255 / 4%);
+  -webkit-text-stroke-color: var(--cyan);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer__head {
+  margin-bottom: 0.9rem;
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.footer__list {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.footer__list a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  transition: color var(--fast) ease;
+}
+
+.footer__list a:hover {
+  color: var(--cyan);
+}
+
+.footer__address {
+  max-width: 15rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.hours--footer {
+  max-width: none;
+}
+
+.hours--footer dt,
+.hours--footer dd {
+  font-size: 0.74rem;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+.footer__bottom p {
+  max-width: 46rem;
+  line-height: 1.7;
+}
+
+.footer__top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color var(--fast) ease;
+}
+
+.footer__top:hover {
+  color: var(--cyan);
+}
+
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

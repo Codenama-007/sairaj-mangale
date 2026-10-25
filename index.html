@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sairaj Neon Arena — Gaming Cafe, Bengaluru</title>
+    <meta
+      name="description"
+      content="24 liquid-cooled rigs, 360Hz OLED and 10-gig fiber. Book a station at Sairaj Neon Arena, a late-night gaming cafe built for squads."
+    />
+    <meta name="theme-color" content="#05060a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="nav container">
+        <a class="brand" href="#top" aria-label="Sairaj Neon Arena — back to top">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <path d="M20 2.5 35.5 11.5v17L20 37.5 4.5 28.5v-17Z" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <path d="M20 10.5 28 15v10l-8 4.5-8-4.5V15Z" fill="none" stroke="var(--cyan)" stroke-width="1.1" />
+            <circle cx="20" cy="20" r="2.4" fill="var(--cyan)" />
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Sairaj</span>
+            <span class="brand__sub">Neon Arena</span>
+          </span>
+        </a>
+
+        <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#arena" data-nav-link><span>01</span>Arena</a></li>
+            <li><a class="nav__link" href="#stations" data-nav-link><span>02</span>Rigs</a></li>
+            <li><a class="nav__link" href="#games" data-nav-link><span>03</span>Games</a></li>
+            <li><a class="nav__link" href="#pricing" data-nav-link><span>04</span>Rates</a></li>
+            <li><a class="nav__link" href="#floor" data-nav-link><span>05</span>Floor</a></li>
+          </ul>
+          <a class="btn btn--primary nav__cta" href="#booking">Book a station</a>
+        </nav>
+
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu" data-nav-toggle>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="scroll-progress" data-progress aria-hidden="true"></div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__glow hero__glow--cyan"></div>
+          <div class="hero__glow hero__glow--magenta"></div>
+          <div class="hero__grid"></div>
+          <div class="hero__scanlines"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow" data-reveal>
+              <span class="pulse" aria-hidden="true"></span>
+              Bengaluru <span class="eyebrow__sep">//</span> 24 stations online
+            </p>
+
+            <h1 class="hero__title" data-reveal style="--reveal-delay: 70ms">
+              <span>Play</span>
+              <span>in the</span>
+              <span class="hero__title-accent"><span class="glitch" data-text="dark">dark</span><span class="hero__dot">.</span></span>
+            </h1>
+
+            <p class="hero__lead" data-reveal style="--reveal-delay: 140ms">
+              A late-night arena for people who take their KD seriously. Liquid-cooled rigs,
+              360Hz OLED, 10-gig fiber — and a kitchen that stays open until close.
+            </p>
+
+            <div class="hero__actions" data-reveal style="--reveal-delay: 200ms">
+              <a class="btn btn--primary" href="#booking">Book a station</a>
+              <a class="btn btn--ghost" href="#stations">See the rigs</a>
+            </div>
+
+            <dl class="hero__meta" data-reveal style="--reveal-delay: 260ms">
+              <div><dt>Stations</dt><dd>24</dd></div>
+              <div><dt>Refresh</dt><dd>360Hz</dd></div>
+              <div><dt>Ping</dt><dd>3ms</dd></div>
+              <div><dt>Close</dt><dd>4AM</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hud">
+              <div class="hud-ring hud-ring--outer"></div>
+              <div class="hud-ring hud-ring--mid"></div>
+              <div class="hud-ring hud-ring--ticks"></div>
+              <div class="hud-ring hud-ring--inner"></div>
+
+              <div class="hud-core">
+                <span class="hud-core__label">Core temp</span>
+                <span class="hud-core__value">41<span>°C</span></span>
+                <span class="hud-core__status">Nominal</span>
+              </div>
+
+              <div class="hud-tag hud-tag--a"><span>GPU load</span><b>87%</b></div>
+              <div class="hud-tag hud-tag--b"><span>Ping</span><b>3ms</b></div>
+              <div class="hud-tag hud-tag--c"><span>Frame rate</span><b>360</b></div>
+              <div class="hud-tag hud-tag--d"><span>Uptime</span><b>99.9%</b></div>
+            </div>
+            <p class="hero__hint">SR-01 <span aria-hidden="true">//</span> LIVE TELEMETRY</p>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#arena" aria-label="Scroll to the arena section">
+          <span>Scroll to enter</span>
+          <span class="scroll-cue__line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span class="ticker__item">No lag</span>
+            <span class="ticker__item">RTX-class rigs</span>
+            <span class="ticker__item">360Hz OLED</span>
+            <span class="ticker__item">10-gig fiber</span>
+            <span class="ticker__item">Friday tournaments</span>
+            <span class="ticker__item">Squad pods</span>
+            <span class="ticker__item">Open till 4AM</span>
+          </div>
+          <div class="ticker__group">
+            <span class="ticker__item">No lag</span>
+            <span class="ticker__item">RTX-class rigs</span>
+            <span class="ticker__item">360Hz OLED</span>
+            <span class="ticker__item">10-gig fiber</span>
+            <span class="ticker__item">Friday tournaments</span>
+            <span class="ticker__item">Squad pods</span>
+            <span class="ticker__item">Open till 4AM</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="section arena" id="arena">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="section-index"><span>01</span>The arena</p>
+            <h2 class="section-title">Not a cafe.<br /><span class="text-accent">A command center.</span></h2>
+          </header>
+
+          <div class="arena__grid">
+            <div class="arena__copy" data-reveal="left">
+              <p class="lead">
+                Sairaj is a purpose-built arena, not a row of desks at the back of a shop. Every
+                station is tuned, cooled and monitored so the only thing you have to think about is
+                the next round.
+              </p>
+              <p>
+                Carpeted squad pods, a tournament stage with a twelve-foot LED wall, and a bar that
+                serves proper coffee at 2AM. Walk in solo or book the whole floor — the network
+                won't flinch either way.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <span class="feature-list__mark" aria-hidden="true">+</span>
+                  <span><strong>Liquid-cooled rigs</strong> Rebuilt every eighteen months.</span>
+                </li>
+                <li>
+                  <span class="feature-list__mark" aria-hidden="true">+</span>
+                  <span><strong>Wired-only network</strong> No Wi-Fi tax on your ping.</span>
+                </li>
+                <li>
+                  <span class="feature-list__mark" aria-hidden="true">+</span>
+                  <span><strong>Squad pods</strong> Closed-door rooms for four to six.</span>
+                </li>
+                <li>
+                  <span class="feature-list__mark" aria-hidden="true">+</span>
+                  <span><strong>Late-night kitchen</strong> Coffee, wraps, energy on tap.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="stats" data-reveal="scale" style="--reveal-delay: 120ms">
+              <div class="stat">
+                <span class="stat__value" data-count="24">24</span>
+                <span class="stat__label">Stations online</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value" data-count="120" data-suffix="+">120+</span>
+                <span class="stat__label">Titles installed</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value" data-count="48">48</span>
+                <span class="stat__label">Tournaments a year</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value" data-count="99.9" data-decimals="1" data-suffix="%">99.9%</span>
+                <span class="stat__label">Network uptime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stations" id="stations">
+        <div class="container">
+          <header class="section-head section-head--split" data-reveal>
+            <div>
+              <p class="section-index"><span>02</span>The rigs</p>
+              <h2 class="section-title">Built to<br /><span class="text-accent">frame-chase.</span></h2>
+            </div>
+            <p class="section-note">
+              Three tiers, one standard: nothing stutters. Every station ships with a mechanical
+              keyboard, a wired mouse and a chair you can sit in for six hours.
+            </p>
+          </header>
+
+          <div class="stations__grid" data-stations></div>
+        </div>
+      </section>
+
+      <section class="section games" id="games">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="section-index"><span>03</span>The library</p>
+            <h2 class="section-title">Your next<br /><span class="text-accent">1,000 hours.</span></h2>
+          </header>
+
+          <div class="games__bar" data-reveal>
+            <div class="filters" role="group" aria-label="Filter games by genre">
+              <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter" type="button" data-filter="fps" aria-pressed="false">FPS</button>
+              <button class="filter" type="button" data-filter="moba" aria-pressed="false">MOBA</button>
+              <button class="filter" type="button" data-filter="racing" aria-pressed="false">Racing</button>
+              <button class="filter" type="button" data-filter="fighting" aria-pressed="false">Fighting</button>
+              <button class="filter" type="button" data-filter="co-op" aria-pressed="false">Co-op</button>
+            </div>
+            <p class="games__count" data-games-count aria-live="polite">12 titles</p>
+          </div>
+
+          <div class="games__grid" data-games></div>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <div class="container">
+          <header class="section-head section-head--split" data-reveal>
+            <div>
+              <p class="section-index"><span>04</span>Access</p>
+              <h2 class="section-title">Pick your<br /><span class="text-accent">session.</span></h2>
+            </div>
+            <div class="rate-toggle" role="group" aria-label="Choose rate type">
+              <button class="rate-toggle__btn" type="button" data-rate="weekday" aria-pressed="true">Weekday</button>
+              <button class="rate-toggle__btn" type="button" data-rate="weekend" aria-pressed="false">Weekend</button>
+            </div>
+          </header>
+
+          <div class="passes" data-passes></div>
+
+          <p class="pricing__note" data-rate-note>
+            Mon — Thu rates · Prices in INR, inclusive of taxes · Demo pricing, not a live menu.
+          </p>
+        </div>
+      </section>
+
+      <section class="section floor" id="floor">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="section-index"><span>05</span>The floor</p>
+            <h2 class="section-title">Inside the<br /><span class="text-accent">arena.</span></h2>
+          </header>
+
+          <div class="gallery" data-gallery></div>
+        </div>
+      </section>
+
+      <section class="section reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <header class="section-head section-head--compact" data-reveal>
+            <p class="section-index"><span>06</span>Transmissions</p>
+            <h2 class="section-title" id="reviews-title">From the floor.</h2>
+          </header>
+        </div>
+        <div class="reviews__viewport">
+          <div class="reviews__track" data-reviews></div>
+        </div>
+      </section>
+
+      <section class="section booking" id="booking">
+        <div class="container booking__grid">
+          <div class="booking__copy">
+            <header class="section-head section-head--compact" data-reveal>
+              <p class="section-index"><span>07</span>Reserve</p>
+              <h2 class="section-title">Secure a<br /><span class="text-accent">station.</span></h2>
+            </header>
+
+            <p class="lead" data-reveal="left">
+              Tell us when you're coming and what you're playing. We'll hold the rig for fifteen
+              minutes past your slot. Walk-ins are welcome whenever there's a free seat.
+            </p>
+
+            <dl class="contact-list" data-reveal="left" style="--reveal-delay: 100ms">
+              <div>
+                <dt>Visit</dt>
+                <dd data-contact-address></dd>
+              </div>
+              <div>
+                <dt>Call</dt>
+                <dd><a data-contact-phone href="#"></a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd><a data-contact-email href="#"></a></dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd><dl class="hours" data-hours></dl></dd>
+              </div>
+            </dl>
+          </div>
+
+          <form class="booking__form panel" data-booking-form data-reveal="scale" novalidate>
+            <div class="form__head">
+              <p class="form__kicker">Station request</p>
+              <h3 class="form__title">Reserve your slot</h3>
+            </div>
+
+            <div class="form__grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your gamertag" aria-describedby="err-name" />
+                <p class="field__error" id="err-name" data-error-for="name"></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" aria-describedby="err-email" />
+                <p class="field__error" id="err-email" data-error-for="email"></p>
+              </div>
+
+              <div class="field">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="date" aria-describedby="err-date" />
+                <p class="field__error" id="err-date" data-error-for="date"></p>
+              </div>
+
+              <div class="field">
+                <label for="time">Start time</label>
+                <select id="time" name="time" aria-describedby="err-time">
+                  <option value="">Select a slot</option>
+                </select>
+                <p class="field__error" id="err-time" data-error-for="time"></p>
+              </div>
+
+              <div class="field">
+                <label for="station">Station</label>
+                <select id="station" name="station" aria-describedby="err-station">
+                  <option value="">Select a rig</option>
+                </select>
+                <p class="field__error" id="err-station" data-error-for="station"></p>
+              </div>
+
+              <div class="field">
+                <label for="players">Players</label>
+                <select id="players" name="players" aria-describedby="err-players">
+                  <option value="">Party size</option>
+                  <option value="1">1 player</option>
+                  <option value="2">2 players</option>
+                  <option value="3">3 players</option>
+                  <option value="4">4 players</option>
+                  <option value="5">5 players</option>
+                  <option value="6">6 players</option>
+                </select>
+                <p class="field__error" id="err-players" data-error-for="players"></p>
+              </div>
+            </div>
+
+            <button class="btn btn--primary form__submit" type="submit">Reserve station</button>
+            <p class="form__note">
+              Demo form — nothing is sent, stored, or charged. Or call
+              <a data-contact-phone href="#">the front desk</a>.
+            </p>
+
+            <div class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1" hidden></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <a class="footer__brand" href="#top" aria-label="Back to top" data-reveal="scale">Sairaj</a>
+
+        <div class="footer__grid" data-reveal style="--reveal-delay: 120ms">
+          <div>
+            <h3 class="footer__head">Navigate</h3>
+            <ul class="footer__list" data-footer-nav></ul>
+          </div>
+          <div>
+            <h3 class="footer__head">Visit</h3>
+            <address class="footer__address" data-contact-address></address>
+          </div>
+          <div>
+            <h3 class="footer__head">Hours</h3>
+            <dl class="hours hours--footer" data-hours></dl>
+          </div>
+          <div>
+            <h3 class="footer__head">Follow</h3>
+            <ul class="footer__list" data-footer-socials></ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Sairaj Neon Arena — demo project. Names, prices and address are placeholders.</p>
+          <a class="footer__top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/* Design tokens — every color, space and type value lives here. */
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg: #05060a;
+  --bg-raised: #080b12;
+  --panel: #0c0f17;
+  --panel-2: #111624;
+  --line: rgb(232 241 255 / 10%);
+  --line-strong: rgb(232 241 255 / 20%);
+
+  /* Text */
+  --text: #e8f1ff;
+  --text-2: #b7c3d8;
+  --muted: #9aa8c0;
+  --dim: #7b8aa3;
+
+  /* Accents — neon is an accent, never a fill */
+  --cyan: #00e5ff;
+  --magenta: #ff2d78;
+  --acid: #c6ff00;
+  --cyan-soft: rgb(0 229 255 / 12%);
+  --magenta-soft: rgb(255 45 120 / 12%);
+  --acid-soft: rgb(198 255 0 / 12%);
+
+  /* Type */
+  --font-display: "Orbitron", "Arial Black", system-ui, sans-serif;
+  --font-ui: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Share Tech Mono", ui-monospace, "Consolas", monospace;
+
+  --fs-hero: clamp(3.4rem, 11vw, 8.25rem);
+  --fs-h2: clamp(2.1rem, 4.6vw, 3.75rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --fs-lead: clamp(1.05rem, 1.35vw, 1.2rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-label: 0.7rem;
+
+  /* Space & layout */
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-y: clamp(4.5rem, 9vw, 8.5rem);
+  --radius: 2px;
+  --radius-lg: 4px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --med: 320ms;
+  --slow: 700ms;
+}

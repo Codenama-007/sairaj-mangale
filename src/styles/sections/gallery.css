@@ -1,0 +1,154 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(190px, 1fr));
+  grid-template-areas:
+    "a a a b b c"
+    "a a a d e e";
+  gap: 0.8rem;
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  isolation: isolate;
+}
+
+.gallery__item--a {
+  grid-area: a;
+}
+.gallery__item--b {
+  grid-area: b;
+}
+.gallery__item--c {
+  grid-area: c;
+}
+.gallery__item--d {
+  grid-area: d;
+}
+.gallery__item--e {
+  grid-area: e;
+}
+
+.gallery__art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(90% 80% at 25% 12%, hsl(var(--h) 85% 50% / 32%), transparent 60%),
+    radial-gradient(70% 60% at 85% 92%, hsl(calc(var(--h) + 40) 85% 55% / 22%), transparent 62%),
+    linear-gradient(160deg, #0a0e16, #04060a);
+  transition: transform 900ms var(--ease);
+}
+
+.gallery__item:hover .gallery__art {
+  transform: scale(1.06);
+}
+
+.gallery__art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 5%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 5%) 1px, transparent 1px);
+  background-size: 34px 34px;
+  transform: perspective(300px) rotateX(55deg);
+  transform-origin: center bottom;
+  opacity: 0.8;
+  mask-image: linear-gradient(to top, #000, transparent 72%);
+}
+
+.gallery__art::after {
+  content: "";
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  left: 12%;
+  height: 3px;
+  background: hsl(var(--h) 90% 62% / 65%);
+  box-shadow: 0 0 26px 4px hsl(var(--h) 90% 55% / 35%);
+}
+
+.gallery__item--b .gallery__art::before {
+  background-size: 22px 22px;
+  transform: none;
+  mask-image: linear-gradient(to bottom, #000, transparent 62%);
+}
+
+.gallery__item--c .gallery__art::after {
+  right: 30%;
+  left: 30%;
+  height: 2px;
+}
+
+.gallery__item--d .gallery__art::before {
+  background-size: 14px 14px;
+  transform: none;
+  opacity: 0.5;
+}
+
+.gallery__item--e .gallery__art::before {
+  transform: perspective(420px) rotateX(62deg);
+  background-size: 48px 48px;
+}
+
+.gallery__cap {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 0.1rem;
+  padding: 2.2rem 1rem 0.95rem;
+  background: linear-gradient(to top, rgb(5 6 10 / 92%), transparent);
+}
+
+.gallery__num {
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+}
+
+.gallery__title {
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.gallery__meta {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 190px);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e";
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+  }
+}

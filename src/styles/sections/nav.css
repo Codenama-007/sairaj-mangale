@@ -1,0 +1,246 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 120;
+  border-bottom: 1px solid transparent;
+  transition:
+    background var(--med) ease,
+    border-color var(--med) ease,
+    backdrop-filter var(--med) ease;
+}
+
+.site-header.is-scrolled,
+.site-header.is-open {
+  border-bottom-color: var(--line);
+  background: rgb(5 6 10 / 88%);
+  backdrop-filter: blur(16px);
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 78px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+}
+
+.brand__mark {
+  width: 32px;
+  flex: none;
+  filter: drop-shadow(0 0 8px rgb(0 229 255 / 35%));
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.brand__sub {
+  margin-top: 0.32rem;
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.55rem;
+}
+
+.nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding-block: 0.4rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color var(--fast) ease;
+}
+
+.nav__link span {
+  color: var(--dim);
+  font-size: 0.56rem;
+  transition: color var(--fast) ease;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--med) var(--ease);
+}
+
+.nav__link:hover,
+.nav__link[aria-current="true"] {
+  color: var(--text);
+}
+
+.nav__link:hover span,
+.nav__link[aria-current="true"] span {
+  color: var(--cyan);
+}
+
+.nav__link:hover::after,
+.nav__link[aria-current="true"]::after {
+  transform: scaleX(1);
+}
+
+.nav__cta {
+  min-height: 42px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.7rem;
+}
+
+.nav__toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+}
+
+.nav__toggle span {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform var(--med) var(--ease);
+}
+
+.nav__toggle span:first-child {
+  transform: translateY(-4px);
+}
+
+.nav__toggle span:last-child {
+  transform: translateY(4px);
+}
+
+.site-header.is-open .nav__toggle span:first-child {
+  transform: rotate(45deg);
+}
+
+.site-header.is-open .nav__toggle span:last-child {
+  transform: rotate(-45deg);
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta));
+  box-shadow: 0 0 12px rgb(0 229 255 / 55%);
+}
+
+@media (max-width: 1024px) {
+  .nav__menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2.25rem;
+    padding: 6.5rem var(--gutter) 3rem;
+    background:
+      radial-gradient(80% 60% at 100% 0%, rgb(255 45 120 / 10%), transparent 65%),
+      rgb(5 6 10 / 97%);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity var(--med) ease,
+      transform var(--med) var(--ease),
+      visibility var(--med);
+  }
+
+  .site-header.is-open .nav__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    letter-spacing: 0.02em;
+  }
+
+  .nav__link span {
+    order: 2;
+    color: var(--cyan);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__cta {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .nav__toggle {
+    display: grid;
+  }
+
+  html.is-locked,
+  html.is-locked body {
+    overflow: hidden;
+  }
+}

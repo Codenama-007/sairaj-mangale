@@ -1,0 +1,83 @@
+.reviews {
+  overflow: hidden;
+}
+
+.reviews__viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.reviews__track {
+  display: flex;
+  width: max-content;
+  animation: reviews-scroll 64s linear infinite;
+}
+
+.reviews__viewport:hover .reviews__track {
+  animation-play-state: paused;
+}
+
+.reviews__group {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.review {
+  display: flex;
+  flex: 0 0 clamp(17rem, 27vw, 23rem);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.4rem;
+  padding: 1.6rem;
+}
+
+.review__stars {
+  color: var(--acid);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+}
+
+.review__quote {
+  color: var(--text-2);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.review__by {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.review__name {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.review__handle {
+  color: var(--dim);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+@keyframes reviews-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews__viewport {
+    overflow-x: auto;
+  }
+
+  .reviews__track {
+    animation: none;
+  }
+}
